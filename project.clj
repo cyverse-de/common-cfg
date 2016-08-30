@@ -1,7 +1,9 @@
-(defproject org.iplantc/common-cfg "5.2.8.0"
+(defproject org.cyverse/common-cfg "2.8.0"
   :description "DE services code for managing configurations."
-  :url "https://github.com/iPlantCollaborativeOpenSource/DE"
+  :url "https://github.com/cyverse-de/common-cfg"
   :license {:name "BSD"}
+  :deploy-repositories [["releases" :clojars]
+                        ["snapshots" :clojars]]
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/tools.logging "0.3.1"]
                  [com.fasterxml.jackson.core/jackson-core "2.5.1"]
