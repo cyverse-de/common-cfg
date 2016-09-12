@@ -1,3 +1,4 @@
+#!groovy
 def repo = "common-cfg"
 def dockerUser = "discoenv"
 
