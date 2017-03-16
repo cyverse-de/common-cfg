@@ -1,4 +1,4 @@
-(defproject org.cyverse/common-cfg "2.8.1"
+(defproject org.cyverse/common-cfg "2.8.2-SNAPSHOT"
   :description "DE services code for managing configurations."
   :url "https://github.com/cyverse-de/common-cfg"
   :license {:name "BSD"}
