@@ -9,3 +9,7 @@ pom.xml.asc
 /.nrepl-port
 build.xml
 test2junit
+.clj-kondo
+.eastwood
+.lsp
+

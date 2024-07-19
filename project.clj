@@ -4,10 +4,12 @@
   :license {:name "BSD"}
   :deploy-repositories [["releases" :clojars]
                         ["snapshots" :clojars]]
-  :plugins [[test2junit "1.2.2"]]
-  :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/tools.logging "0.3.1"]
-                 [bouncer "0.3.2" :exclusions [org.clojure/clojurescript]]
-                 [medley "0.5.5"]
+  :plugins [[jonase/eastwood "1.4.3"]
+            [lein-ancient "0.7.0"]
+            [test2junit "1.4.4"]]
+  :dependencies [[org.clojure/clojure "1.11.3"]
+                 [org.clojure/tools.logging "1.3.0"]
+                 [bouncer "1.0.1" :exclusions [org.clojure/clojurescript]]
+                 [medley "1.4.0"]
                  [me.raynes/fs "1.4.6"]
                  [uri "1.1.0"]])

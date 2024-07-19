@@ -1,9 +1,10 @@
 (ns common-cfg.cfg
-  (:use [medley.core])
   (:require [clojure.edn :as edn]
             [bouncer [core :as b] [validators :as v]]
             [clojure.java.io :refer [reader]]
+            [clojure.pprint :refer [pprint]]
             [me.raynes.fs :as fs]
+            [medley.core :refer [filter-keys]]
             [clojure.tools.logging :as log]
             [uri.core :as uri])
   (:import [java.util Properties]))
@@ -43,7 +44,7 @@
   [m]
   (let [sw (java.io.StringWriter.)]
     (binding [*out* sw]
-      (clojure.pprint/pprint m))
+      (pprint m))
     (str sw)))
 
 (defn- valid-config?
@@ -67,8 +68,8 @@
   {:default-message-format "%s must be parseable as an integer", :optional true}
   [k]
   (try
-    (Integer/parseInt k)
-    true
+    (let [_ (Integer/parseInt k)]
+      true)
     (catch Exception e
       false)))
 
